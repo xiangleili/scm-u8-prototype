@@ -2682,6 +2682,7 @@
             <p>● <b>决策三（状态机三态化，去除过度设计）</b>：状态全局收敛为标准三态【待同步】、【已同步】、【同步失败】，非对外销售标品彻底去除过度复杂的“持续失败/熔断停机”。</p>
             <p>● <b>决策四（同步时间即入账时间，解决提前入账需求）</b>：单据同步时间即入账时间，由宝应仁恒仓储回传实际入账时间推入 U8，作为 U8 采购入库单与零售日报的单据入账日期，确保账物勾稽。</p>
             <p>● <b>决策五（物料提示与拦截规范）</b>：保存成功统一展示 <code>[✔] 保存成功</code>；编码重复展示 <code>[❌] 存货编码已存在，不可重复添加  [✕]</code>；接口连接超时展示 <code>[❌] U8接口连接超时，请稍后重试  [✕]</code>；停用遇有效合同时采用方案 B 居中模态弹窗醒目展示 <code>该原料已关联合同【对应合同名称】，禁止停用！</code>。</p>
+            <p>● <b>决策六（云端永久访问与同步规范）</b>：原型已托管至 GitHub Pages，脱离个人局域网与电脑硬件限制，官方唯一永久在线地址：<a href="https://xiangleili.github.io/scm-u8-prototype/" target="_blank" class="text-blue-600 underline font-mono font-bold">https://xiangleili.github.io/scm-u8-prototype/</a>。任何后续修改强制执行 <code>sync_prototype_to_github.sh</code> 闭环同步。</p>
             <div class="p-2.5 bg-white/90 rounded border border-dashed border-blue-300 text-blue-900">
               <b>【后续沟通结论记录预留区】</b>：<br>
               <i>（点击右上角【编辑 PRD】，可在此处随时追加新的会议决议与需求备忘，点击【保存修改】自动持久化保存）</i>
@@ -6281,7 +6282,7 @@
       });
     }
 
-    const PRD_STORAGE_KEY = 'scm_u8_prd_content_storage_v10';
+    const PRD_STORAGE_KEY = 'scm_u8_prd_content_storage_v11';
 
     // 页面加载时自动恢复本地保存的 PRD 自定义内容
     if (prdContent) {
